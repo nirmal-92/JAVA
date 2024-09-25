@@ -1,0 +1,34 @@
+cd - change directory
+cat - concatenation (+)
+man ls - detailing of commands
+touch - opening a file
+ifconfig - IP Address
+cd ../ - close directory
+mkdir - make directory
+rmdir - remove directory
+nano <filename> - open file in nano mode
+cat <filename> - display the content of the file
+sudo su - root access
+exit - root disconnect
+rm - remove a file
+get - to download a file
+
+---------------------------------------------------------------------------------
+
+krunal kushawi - Networkings
+
+//Metasploit PortScanning//
+1.search portscan
+2.use <address>
+3.show options
+4.set values
+5.Run
+
+------------------------------------------------------------------------------------
+
+sudo nmap -sV - to scan the port and extract the details (sV - version Detection)
+
+
+
+
+

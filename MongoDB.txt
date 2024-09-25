@@ -1,0 +1,26 @@
+use - create database
+
+db.createCollection("Student") - creates a collection
+
+db.Student.insertOne({"name": "Nirmal", "age" : "19"}) - inserts one value
+
+db.Student.insertMany([{"name" : "Karmukilan"} , {"name" : "Magesh"} , {"name" : "Kavirajan"} , {"Name" : "Ragul"}]) - inserts multiple value
+
+db.Student.find() - displays values(select * from table)
+
+db.Student.find().count() - counts the no of values
+
+db.Student.find().limit(5) - displays first 5 values
+
+db.Student.find({ _id: ObjectId('65815f5bd10b25872c7b6ffb')}) - to find a particular value
+
+db.Student.find().sort({"name" : -1}) - to sort in desending order
+
+db.Student.find().sort({"name" : 1}) - to sort in ascending order
+
+db.Student.DeleteOne({"name": "Nirmal", "age" : "19"}) - deletes a data
+
+
+
+
+

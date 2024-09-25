@@ -1,0 +1,16 @@
+STRING FUNCTIONS:
+
+	ABS : returns the absolute values of a number
+	SYNTAX: ABS(numeric_value)
+
+	ROUND : rounds a value to a specific precision
+	SYNTAX: ROUND(num_value,p) where p = precision
+	
+	TRUNCATE : truncates a value to a specified precision
+	SYNTAX: TRUNC(num_value,p), where p = precision
+
+	MOD : return the remainder of the division
+	SYNTAX : MOD(m,n)
+
+	POWER(x,y) : calculates x to the power of y
+	SYNTAX: POW(x,y)

@@ -1,0 +1,11 @@
+Wrapper class:
+
+A class which contains the primitive datatypes.[int,char,float,byte,short].
+uses java.util.package.
+Autoboxing:  convert primitive datatype into corresponding objects.
+Unboxing:  convert the wrapper class into corresponding primitive datatype.
+creating a wrapper class
+
+
+
+
