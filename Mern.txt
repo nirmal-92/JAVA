@@ -1,0 +1,14 @@
+SaaS - Software as a Service
+Paas - Platform as a Service
+IaaS - Infrastructure as a Service
+Cloud Computing
+
+REACT:
+//Installation
+1. npm create vite@latest
+2. cd vite-project
+   npm install
+   npm run dev
+-> entry point - main.jsx
+//basic command
+React.createElement("div",{},"hello world. I am Nirmal")

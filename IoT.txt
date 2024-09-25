@@ -1,0 +1,86 @@
+void setup() -  onetime executed part or structure.
+		it is used to declare the I/O and initialisation parts
+
+void loop() - repeated loop structure
+	      logical
+
+I/O - pinMode(13,OUTPUT);
+pinMode(D2,OUTPUT);
+pinMode(A0,OUTPUT);
+pinMode(D,OUTPUT);
+
+Delay - delay(1000) in milliseconds
+Serial Counter - Serial.begin(9600);
+		Serial.print('SECE');
+
+LCD - lcd.begin(16,2); [16-character, 2-node]
+	lcd.print('SECE');
+	lcd.SetCursor(0,0)->[position,node]
+
+Digital Read/Write:
+
+analogRead(A0);  analogWrite();   digitalRead(0);  digitWrite(13,HIGH);
+
+
+
+1)LED:
+void setup() {
+	PrintMode(D4,OUTPUT);
+}
+void loop() {
+	digitalWrite(D4);
+	Delay(1000);
+	digitalWrite(D4);
+	Delay(1000);
+}
+
+
+2)Digital Sensor
+void setup() {
+	PrintMode(D4,INPUT);
+	PrintMode(D4,INPUT);
+}
+void loop() {
+	if(digitalRead(D1) == HIGH){
+		digitalWrite(D4, HIGH);
+	}
+	else{
+		digitalWrite(D4, LOW);
+	}
+}
+
+
+3) Analog Sensor intefacing
+void setup() {
+	PrintMode(D4,INPUT);
+	PrintMode(D4,INPUT);
+}
+void loop() {
+	unsigned int LDR = analogRead(D0);
+	if(LDR >= 500){
+		digitalWrite(D4, HIGH);
+	}
+	else{
+		digitalWrite(D4, LOW);
+	}
+}
+
+
+4)PWM Sensors using Arduino
+
+5) Interfacing Potentiometer
+int ledPin = 6;
+int analogPin = A0;
+int val = 0;
+void setup(){
+	pinMode(ledPin, OUTPUT);
+	pinMode(analogPin, INPUT);
+}
+void loop(){
+	val = analogRead(analogPin);
+	analogWrite = (ledPin, val / 4);
+}
+
+6)Interfacing Sensors - IR Sensors(Smart Home Automation)
+7)Servo Motor with Arduino
+8)Accelerometer with arduino

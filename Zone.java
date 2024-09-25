@@ -1,13 +1,17 @@
-import java.time.*;
+import java.time.LocalDate;
+import java.time.ZoneId;
+
 public class Zone {
     public static void main(String[] args) {
-        //create a clock
+        // Create a clock
         ZoneId zid = ZoneId.of("Asia/Kolkata");
-        //create an LocalDate object using now(zoneId)
-        LocalDate It = LocalDate.now(zid);
-        //print result
-        System.out.println("LocalDate :"+ It);
+
+        // Get the current date for the specified time zone
+        LocalDate currentDate = LocalDate.now(zid);
+
+        // Print the result
+        System.out.println("LocalDate: " + currentDate);
     }
-} 
-    
+}
+   
 
